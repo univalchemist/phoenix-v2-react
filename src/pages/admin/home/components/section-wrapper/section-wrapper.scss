@@ -1,0 +1,22 @@
+.section-wrapper.admin {
+  border-radius: 12px;
+  border: 1px solid var(--gray-light);
+  padding: 24px;
+
+  &:not(.chart-wrapper) {
+    height: max-content;
+  }
+
+  &:not(.w-100) {
+    width: max-content;
+  }
+
+  &.chart-wrapper {
+    justify-content: space-between;
+  }
+
+  .section-container {
+    width: 100%;
+    height: max-content;
+  }
+}

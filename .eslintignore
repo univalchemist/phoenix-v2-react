@@ -1,0 +1,11 @@
+node_modules
+build
+.eslintrc.js
+.gitignore
+.env.jest.js
+i18n.ts
+vite.config.ts
+src/libs/**/*
+src/apollo/graphql/**/*.tsx
+src/apollo/graphql/**/*.ts
+**/types/**/*

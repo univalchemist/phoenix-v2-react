@@ -1,0 +1,17 @@
+.text-link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  font-family: var(--font-medium);
+  color: var(--blue-default);
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

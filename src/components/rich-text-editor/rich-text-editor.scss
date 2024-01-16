@@ -1,0 +1,127 @@
+.custom-rich-text-editor {
+  width: 100%;
+
+  & > .form-field {
+    height: max-content;
+    display: block;
+    z-index: 1;
+    position: relative;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-default);
+    -webkit-box-shadow: 0 1px 2px rgba(16, 24, 40, .05);
+    box-shadow: 0 1px 2px rgba(16, 24, 40, .05);
+    border-radius: 12px;
+    -webkit-transition: border-color .3s ease-in-out;
+    -o-transition: border-color .3s ease-in-out;
+    transition: border-color .3s ease-in-out;
+
+    &.focused {
+      border-color: var(--blue-default);
+      box-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 0 0 4px var(--blue-lighter);
+    }
+
+    .rte-wrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .rte-editor {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: unset;
+        padding: 0;
+        order: 1;
+
+        * {
+          font-family: var(--font-medium);
+          color: var(--primary-default);
+        }
+
+        &.placeholder {
+          * {
+            color: var(--primary-light);
+            font-size: 14px;
+          }
+        }
+
+        .public-DraftStyleDefault-block {
+          margin: 0 !important;
+        }
+      }
+
+      .rte-toolbar {
+        order: 2;
+        padding-top: 8px;
+        border: none;
+        border-top: 1px solid var(--gray-light);
+        gap: 4px;
+
+        .rte-toolbar-btn-group {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          position: relative;
+
+          .rte-toolbar-btn {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            transition: border 0.3s ease-in-out;
+            box-sizing: content-box;
+
+            &:hover {
+              border-color: var(--blue-lighter);
+            }
+
+            &.active {
+              border-color: var(--blue-default);
+
+              path {
+                fill: var(--blue-default);
+              }
+            }
+
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rte-popover {
+    .popover {
+      overflow: hidden;
+      width: 250px;
+      border: 1px solid var(--gray-light);
+
+      .link-fields-container, .image-fields-container {
+        padding: 14px 16px;
+    
+        .toolbar-input {
+          flex: 1;
+          input {
+            height: unset;
+            padding: 6px 8px;
+            border-radius: 4px;
+            box-shadow: none;
+          }
+        }
+
+        .rte-popup-btn {
+          &:first-of-type {
+            color: var(--blue-default);
+          }
+        }
+      }
+    }
+  }
+}

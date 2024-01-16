@@ -1,0 +1,28 @@
+.chip-container {
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: var(--gray-lighter);
+
+  & > span {
+    white-space: nowrap;
+  }
+
+  button {
+    padding: 0 !important;
+
+    [class^="ic"] {
+      path {
+        fill: var(--primary-default);
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      [class^="ic"] {
+        path {
+          fill: var(--pink-default);
+        }
+      }
+    }
+  }
+}

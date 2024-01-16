@@ -1,0 +1,55 @@
+.surveys-container {
+  height: 300px;
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+  }
+  .comment-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 6px;
+    padding: 0;
+  }
+
+  .comments-wrapper {
+    .popover-content {
+      padding: 12px 14px;
+      border-radius: 12px;
+    }
+    .comments-container {
+      max-width: 675px;
+      max-height: 500px;
+  
+      .comments-header {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--gray-light);
+  
+        .comments-close {
+          padding: 0;
+        }
+      }
+  
+      .typography {
+        text-align: left;
+      }
+  
+      .comments-list-container {
+        margin: 0 -5px;
+        padding: 0 5px;
+        flex: 1;
+
+        .comment-item {
+          padding: 12px 0;
+          border-bottom: 1px solid var(--gray-lighter);
+
+          &:last-of-type {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.breadcrumbs-container {
+  .bread-crumb {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary-default);
+    cursor: pointer;
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: var(--blue-default);
+    }
+
+    &.current {
+      color: var(--blue-default);
+      cursor: text;
+    }
+  }
+
+  [class^="ic"] {
+    path {
+      stroke: var(--gray-300);
+    }
+    &:last-of-type {
+      display: none;
+    }
+  }
+}

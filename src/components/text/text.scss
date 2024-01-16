@@ -1,0 +1,15 @@
+.typography {
+  font-family: var(--font-regular);
+  font-size: 14px;
+  color: var(--primary-dark);
+
+  &.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &.noWrap {
+    white-space: nowrap;
+  }
+}

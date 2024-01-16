@@ -1,0 +1,28 @@
+.project-plan-header {
+  .view-mode-container {
+    .view-mode-button {
+      background-color: transparent;
+      color: var(--primary-light);
+
+      &.active {
+        background-color: var(--blue-light);
+        color: var(--primary-dark);
+      }
+
+      &:first-of-type {
+        border: 1px solid var(--gray-300);
+        border-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+
+      &:last-of-type {
+        border: 1px solid var(--gray-300);
+        border-left: none;
+        border-radius: 0;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+    }
+  }
+}

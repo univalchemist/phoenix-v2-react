@@ -1,0 +1,143 @@
+.diagram-container {
+  padding: 80px 24px 94px;
+
+  .diagram-element {
+    flex: 1;
+  }
+  .project-goal-container {
+    height: 100%;
+
+    .elements-wrapper {
+      .element-wrapper {
+        background-color: var(--green-lighter-40);
+        justify-content: flex-end !important;
+
+        .typography {
+          color: var(--primary-default) !important;
+          font-size: 16px !important;
+          line-height: 24px !important;
+          font-weight: 400 !important;
+          font-family: var(--font-regular) !important;
+          text-align: left;
+        }
+      }
+    }
+    .diagram-label {
+      background-color: var(--green-lighter);
+    }
+  }
+
+  .development-areas-container {
+    height: 100%;
+    .elements-wrapper {
+      .element-wrapper {
+        background-color: var(--yellow-light-40);
+        justify-content: flex-end;
+
+        &.active {
+          background-color: var(--yellow-default-60);
+        }
+
+        &:not(.no-hover) {
+          &:hover {
+            background-color: var(--yellow-default-60);
+          }
+        }
+      }
+    }
+    .diagram-label {
+      background-color: var(--yellow-light);
+    }
+  }
+
+  .goals-container {
+    height: 100%;
+    .elements-wrapper {
+      .element-wrapper {
+        background-color: var(--blue-lighter-40);
+        justify-content: flex-end;
+
+        &.active {
+          background-color: var(--blue-default);
+        }
+
+        &:not(.no-hover) {
+          &:hover {
+            background-color: var(--blue-default);
+          }
+        }
+      }
+    }
+    .diagram-label {
+      background-color: var(--blue-light);
+    }
+  }
+
+  .action-list-container {
+    height: 100%;
+    .elements-wrapper {
+      .element-wrapper {
+        background-color: var(--purple-light-40);
+        justify-content: flex-end;
+
+        &.active {
+          background-color: var(--pink-default);
+        }
+
+        &:not(.no-hover) {
+          &:hover {
+            background-color: var(--pink-default);
+          }
+        }
+      }
+    }
+    .diagram-label {
+      background-color: var(--pink-lighter-75);
+    }
+  }
+
+  .elements-wrapper {
+    flex: 1;
+  }
+
+  .element-wrapper {
+    padding: 24px;
+    border-radius: 16px;
+    transition: all .3s ease-in-out;
+
+    &, * {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    &:not(.no-hover) {
+      &:hover {
+        opacity: 0.5 !important;
+      }
+    }
+
+    &:last-of-type {
+      flex: 1;
+    }
+
+    .typography {
+      text-align: center;
+      white-space: normal;
+    }
+  }
+
+  .diagram-label {
+    width: 100%;
+    border-radius: 16px;
+    padding: 30px 24px;
+  }
+
+  .diagram-add-button {
+    border-radius: 40px;
+    background-color: var(--white);
+
+    button {
+      padding: 10px 12px !important;
+    }
+  }
+}

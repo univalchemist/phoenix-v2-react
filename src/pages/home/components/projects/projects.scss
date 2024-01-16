@@ -1,0 +1,22 @@
+.projects-wrapper {
+  .project-item {
+    cursor: pointer; 
+    &.select-item {
+      padding: 6px 15px;
+
+      .project-title {
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  .popover-content {
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+
+  .projects-container {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}

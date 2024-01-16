@@ -1,0 +1,70 @@
+.navbar {
+  border-right: 1px solid var(--gray-light);
+  padding: 0 20px 24px 24px;
+  position: sticky;
+  top: 0;
+  &.customer, &.admin {
+    width: 256px;
+    height: 100vh;
+    flex-shrink: 0;
+
+    .user-account {
+      cursor: pointer;
+      .user-name {
+        flex: 1;
+      }
+    }
+  }
+
+  .app-logo {
+    padding: 24px 0;
+  }
+
+  ul {
+    flex: 1;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    li {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease-in-out;
+      margin-bottom: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--gray-200);
+      }
+
+      &.active {
+        background-color: var(--gray-lighter);
+  
+        a {
+          color: var(--primary-dark);
+        }
+      }
+
+      &.nav-divider {
+        height: 0;
+        width: 100%;
+        border-bottom: 1px solid var(--gray-light);
+        margin: 24px 0;
+      }
+
+      a {
+        font-family: var(--font-medium);
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--primary-light);
+        transition: color 0.3s ease-in-out;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+}

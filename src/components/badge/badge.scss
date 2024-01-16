@@ -1,0 +1,28 @@
+.badge {
+  font-family: var(--font-medium);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--primary-light);
+  padding: 4px 6px;
+  border-radius: 30px;
+
+  &.secondary {
+    background-color: var(--gray-lighter);
+    color: var(--primary-light);
+  }
+
+  &.error {
+    background-color: var(--pink-lighter);
+    color: var(--pink-default);
+  }
+
+  &.warning {
+    background-color: var(--yellow-lighter);
+    color: var(--yellow-default);
+  }
+
+  &.info {
+    background-color: var(--blue-light);
+    color: var(--blue-default);
+  }
+}

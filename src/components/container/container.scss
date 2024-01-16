@@ -1,0 +1,16 @@
+.container-wrapper {
+  display: flex;
+
+  &.row {
+    flex-direction: row;
+    &.reversed {
+      flex-direction: row-reverse;
+    }
+  }
+  &.col {
+    flex-direction: column;
+    &.reversed {
+      flex-direction: column-reverse;
+    }
+  }
+}

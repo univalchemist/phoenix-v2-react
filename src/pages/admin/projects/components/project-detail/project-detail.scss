@@ -1,0 +1,70 @@
+.project-detail-modal {
+  .overlay {
+    background-color: transparent;
+    backdrop-filter: unset;
+  }
+
+  .modal-content {
+    position: fixed;
+    right: -100%;
+    width: 340px;
+    top: 0;
+    bottom: 0;
+    max-height: unset;
+    border-radius: 0;
+    box-shadow: -10px 0 10px 0 #1D144310;
+    transition: right 0.3s ease-in-out;
+  }
+
+  &.open {
+    .modal-content {
+      right: 0;
+    }
+  }
+
+  .modal-header {
+    align-items: center !important;
+  }
+
+  .modal-body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    .project-detail-modal-body {
+      height: 100%;
+      .container-title {
+        padding: 0 1.5rem 8px;
+      }
+
+      .project-surveys-container {
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--gray-light);
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+        .survey-item {
+          width: 100%;
+          padding: 8px 1.5rem;
+  
+          .survey-status {
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+  
+            &.active {
+              background-color: var(--green-light);
+            }
+  
+            &.next {
+              background-color: var(--yellow-default);
+            }
+  
+            &.completed {
+              background-color: var(--pink-dark);
+            }
+          }
+        }
+      }
+    }
+  }
+}

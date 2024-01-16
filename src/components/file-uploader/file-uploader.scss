@@ -1,0 +1,86 @@
+.file-uploader-container {
+  width: 100%;
+  .upload-box {
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid var(--gray-default);
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: border-color 0.3s ease-in-out, background-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.3s ease-in-out, background-color 0.2s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out, background-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.3s ease-in-out, background-color 0.2s ease-in-out;
+    -o-transition: border-color 0.3s ease-in-out, background-color 0.2s ease-in-out;
+
+    &.error {
+      border-color: var(--pink-default);
+      background-color: var(--pink-lighter);
+    }
+
+    &:hover {
+      border-color: var(--blue-default) !important;
+    }
+
+    &.dragging-over {
+      border-color: var(--blue-default);
+      border-width: 1px;
+      border-style: dashed;
+      background-color: #787CDD25;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+      opacity: 0;
+    }
+
+    .file-loaded {
+      max-width: 75px;
+      max-height: 75px;
+      border-radius: 8px;
+    }
+  
+    .ic-document-upload {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 12px auto;
+      border: 1px solid var(--gray-light);
+      border-radius: 8px;
+
+      path {
+        fill: var(--primary-light)
+      }
+    }
+
+    h4 {
+      margin: 0;
+      font-family: var(--font-regular);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--primary-default);
+
+      b {
+        font-family: var(--font-medium);
+        font-weight: 500;
+        color: var(--primary-dark);
+      }
+    }
+
+    p {
+      margin: 0;
+      padding-top: 4px;
+      font-weight: var(--font-regular);
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--primary-default);
+    }
+  }
+}

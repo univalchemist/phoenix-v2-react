@@ -1,0 +1,94 @@
+
+.vectors-chart-container {
+  height: 100%;
+  border-right: 1px solid var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .vector-chart-wrapper {
+    $label-height: 38px;
+    $line-width: 50px;
+    $line-height: 30px;
+    opacity: 0;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+    &.loaded {
+      opacity: 1;
+    }
+  
+    .chart-label-wrapper {
+      display: flex;
+      position: absolute;
+  
+      .line-wrapper {
+        height: max-content;
+        img {
+          display: none;
+        }
+      }
+  
+      .chart-label {
+        background-color: var(--white);
+        max-width: 210px;
+        height: $label-height;
+        width: max-content;
+        padding: 0 14px;
+        cursor: pointer;
+        border-radius: 30px;
+        border: 1px solid var(--gray-default);
+      }
+  
+      &.top {
+        transform: translateY(-100%);
+        .line-wrapper {
+          img:nth-of-type(1) {
+            display: block;
+            width: $line-width;
+            margin-top: calc($label-height / 2);
+          }
+        }
+      }
+      &.right {
+        .line-wrapper {
+          img:nth-of-type(2) {
+            height: $line-height;
+            display: block;
+            margin-right: -25px;
+          }
+        }
+        .chart-label {
+          margin-top: $line-height;
+        }
+      }
+      &.left {
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translate(-100%,  calc(-1 * $label-height / 2));
+        .line-wrapper {
+          img:nth-of-type(4) {
+            height: $line-height;
+            display: block;
+          }
+        }
+        .chart-label {
+          margin-top: calc(-2 * $line-height);
+          margin-right: 25px;
+        }
+      }
+      &.bottom {
+        flex-direction: row-reverse;
+        .line-wrapper {
+          img:nth-of-type(3) {
+            display: block;
+            width: $line-width;
+          }
+        }
+        .chart-label {
+          margin-top: calc($line-height / 2);
+        }
+      }
+    }
+  }
+}

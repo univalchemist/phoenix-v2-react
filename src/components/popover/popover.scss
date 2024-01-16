@@ -1,0 +1,99 @@
+.popover-container {
+  $arrow-size: 6px;
+  $offset: 10px;
+  position: relative;
+  min-width: max-content;
+
+  .popover {
+    border: none;
+    padding-top: 0 !important;
+
+    &.arrow {
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: $arrow-size solid transparent;
+      }
+
+      &[class*="bottom-"] {
+        padding-top: $arrow-size !important;
+        margin-top: 0;
+        &::before {
+          top: -$arrow-size;
+          border-bottom-color: var(--gray-200);
+        }
+      }
+
+      &[class*="top-"] {
+        margin-top: -$arrow-size !important;
+        padding-top: 0;
+        &::before {
+          bottom: calc(-2 * $arrow-size);
+          border-top-color: var(--gray-200);
+        }
+      }
+  
+      &.bottom-start, &.top-start {
+        &::before {
+          left: $offset;
+        }
+      }
+      &.bottom-center, &.top-center {
+        &::before {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      &.bottom-end, &.top-end {
+        &::before {
+          right: $offset;
+        }
+      }
+
+      &[class*="right-"] {
+        padding-left: $arrow-size !important;
+        margin-left: 0;
+        &::before {
+          left: -$arrow-size;
+          border-right-color: var(--gray-200);
+        }
+      }
+      &[class*="left-"] {
+        padding-left: 0;
+        margin-left: -$arrow-size !important;
+        &::before {
+          right: calc(-2 * $arrow-size);
+          border-left-color: var(--gray-200);
+        }
+      }
+
+      &.right-start, &.left-start {
+        &::before {
+          top: $offset;
+        }
+      }
+      &.right-center, &.left-center {
+        &::before {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &.right-end, &.left-end {
+        &::before {
+          bottom: $offset;
+        }
+      }
+    }
+
+    .popover-content {
+      border: 1px solid var(--gray-light);
+      background: var(--white);
+      -webkit-box-shadow: var(--shadow-md);
+      box-shadow: 0 2px 4px -2px rgba(16, 24, 40, .06), 0px 4px 8px -2px rgba(16, 24, 40, .1);
+      overflow: auto;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.avatar-container {
+  border-radius: 100%;
+  background-color: var(--gray-light);
+  position: relative;
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 100%;
+  }
+
+  .status {
+    width: 10.5px;
+    height: 10.5px;
+    border-radius: 100%;
+    border: 1.5px solid var(--white);
+    background-color: var(--gray-light);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+    &.active {
+      background-color: #54A056;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.custom-stepper {
+  width: 100%;
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      gap: 12px;
+
+      &:last-child {
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+
+      &::before {
+        content: "";
+        left: 50%;
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        bottom: 6px;
+        transform: translateY(50%);
+        background: var(--gray-light);
+      }
+
+      &::after {
+        content: "";
+        left: 100%;
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        bottom: 6px;
+        transform: translateY(50%);
+        background: var(--gray-light);
+      }
+
+      .text {
+        width: 100%;
+        text-align: center;
+      }
+
+      &.done {
+        &::before {
+          background: var(--blue-default) !important;
+        }
+
+        &::after {
+          background: var(--blue-default);
+        }
+      }
+
+      &.current {
+        .text * {
+          color: var(--blue-default) !important;
+          font-weight: 500 !important;
+          font-family: var(--font-medium) !important;
+        }
+      }
+
+      &.first {
+        &::before {
+          background: var(--gray-light);
+        }
+      }
+
+      .icon-wrapper {
+        position: relative;
+        z-index: 2;
+
+        .indicator {
+          width: 12px;
+          height: 12px;
+          border-radius: 100%;
+          background-color: var(--white);
+          border: 2px solid var(--gray-light);
+          transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+        }
+      }
+
+      &.current {
+        .icon-wrapper {
+          .indicator {
+            border-color: var(--blue-default);
+          }
+        }
+      }
+
+      &.done {
+        .icon-wrapper {
+          .indicator {
+            border-color: var(--blue-default);
+            background-color: var(--blue-default);
+          }
+        }
+      }
+    }
+  }
+}

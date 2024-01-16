@@ -1,0 +1,15 @@
+.section-wrapper.customer {
+  height: max-content;
+
+  &:not(.w-100) {
+    width: max-content;
+  }
+
+  .section-container {
+    width: 100%;
+    height: max-content;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-light);
+  }
+}

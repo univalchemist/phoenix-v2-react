@@ -1,0 +1,41 @@
+.action-list-wrapper {
+  .action-list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid var(--gray-light);
+    overflow-y: hidden;
+    .data-table {
+      flex: 1;
+
+      th {
+        padding: 8px;
+      }
+      td {
+        padding: 12px 8px;
+      }
+    }
+  }
+
+  .vector-action {
+    min-width: 0;
+    width: max-content;
+    .popover-content {
+      border-radius: 12px;
+      padding: 6px 2px;
+
+      .action-menu-container {
+        .menu-item {
+          padding: 0 6px;
+          width: 100%;
+          text-align: left;
+
+          svg path {
+            fill: var(--primary-default)
+          }
+        }
+      }
+    }
+  }
+}

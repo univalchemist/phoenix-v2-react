@@ -1,0 +1,103 @@
+.data-table {
+  overflow: auto;
+  table {
+    min-width: 100%;
+
+    thead {
+      tr {
+        &:first-child {
+          th {
+            &:first-child {
+              border-top-left-radius: 0;
+            }
+
+            &:last-child {
+              border-top-right-radius: 0;
+            }
+          }
+        }
+
+        [class*="ic-sort"] {
+          path {
+            stroke: var(--primary-light);
+          }
+        }
+
+        th.sortable {
+          cursor: pointer;
+        }
+      }
+    }
+
+    tr {
+      padding: 0 10px;
+
+      td, th {
+        min-height: 32px;
+        padding: 7px 6px;
+        text-align: left;
+        font-family: var(--font-regular);
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--primary-default);
+        user-select: none;
+
+        &:last-child {
+          text-align: right;
+          padding-right: 16px;
+        }
+        &:first-child {
+          padding-left: 16px;
+        }
+      }
+    }
+
+    thead {
+      tr {
+        background-color: var(--gray-lighter);
+
+        th {
+          font-family: var(--font-medium);
+          font-size: 12px;
+          color: var(--primary-light);
+          line-height: 16px;
+          position: sticky;
+          top: 0;
+          background-color: var(--gray-lighter);;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid var(--gray-light);
+        }
+
+        &:last-child {
+          td {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    &:not(.info-only) {
+      tbody {
+        tr {
+          * {
+            cursor: pointer;
+          }
+          &:hover {
+            background-color: var(--gray-lighter);
+          }
+          transition: background-color 0.2s linear;
+          -webkit-transition: background-color 0.2s linear;
+          -moz-transition: background-color 0.2s linear;
+          -ms-transition: background-color 0.2s linear;
+          -o-transition: background-color 0.2s linear;
+        }
+      }
+    }
+  }
+}

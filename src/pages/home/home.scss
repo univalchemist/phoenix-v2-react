@@ -1,0 +1,10 @@
+.home-content.customer {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 100px);
+  .surveys-container {
+    min-width: 250px;
+    height: 100%;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,128 @@
+.project-modal {
+  .modal-content {
+    max-height: 90vh;
+  }
+
+  &.project-form-back {
+    min-width: unset;
+    padding: 0;
+  }
+
+  .linked-to-strategic {
+    width: 132px;
+  }
+
+  .header-button {
+    padding: 4px 8px !important;
+
+    &.error {
+      background-color: var(--pink-lighter);
+      border-color: var(--pink-lighter);
+      color: var(--pink-default);
+    }
+
+    &.info {
+      background-color: var(--blue-light);
+      border-color: var(--blue-light);
+      color: var(--blue-default);
+    }
+  }
+
+  .conditional-container {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.3s ease-out;
+
+    &.visible {
+      max-height: 1000px;
+    }
+  }
+
+  .project-vectors-container {
+    .data-table {
+      width: 100%;
+      &.hide {
+        display: none;
+      }
+
+      .questions-button {
+        padding: 2px 4px 2px 8px !important;
+
+        .q-icon-wrapper {
+          width: 22px;
+          height: 22px;
+          border-radius: 100%;
+          background-color: var(--white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+
+    .new-vector-btn-container {
+      padding-top: 8px;
+      border-top: 1px solid var(--gray-light);
+      button {
+        padding: 0 !important;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+
+  .generate-btn {
+    padding: 8px 12px;
+    line-height: 20px;
+    border: none;
+  }
+
+  .question-status {
+    padding: 9px 12px;
+    border-radius: 50px ;
+    border: 1px solid var(--gray-light);
+  }
+
+  .back-to-vectors {
+    padding: 0;
+    gap: 12px;
+    color: var(--primary-dark);
+    line-height: 20px;
+  }
+
+  .questions-list {
+    .question-content {
+      &:not(.editable) {
+        input {
+          background-color: transparent !important;
+          border-color: transparent !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+  
+    tr {
+      &.non-hoverable {
+        background-color: transparent !important;
+      }
+      .question-action {
+        .popover-content {
+          border-radius: 12px;
+          padding: 6px 2px;
+          min-width: 150px;
+        }
+        .menu-item {
+          button {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+}

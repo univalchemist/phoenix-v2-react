@@ -1,0 +1,14 @@
+.vector-zoom-content {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 100px);
+  padding: 12px 24px;
+
+  .actions {
+    .section-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

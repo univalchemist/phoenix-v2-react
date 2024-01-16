@@ -1,0 +1,119 @@
+.app-header {
+  height: 100px;
+  border-bottom: 1px solid var(--gray-light);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  &.customer, &.admin {
+    .nav-wrap {
+      width: 100%;
+      .header-children {
+        flex: 1;
+        height: 100%;
+      }
+
+      .toolbar {
+        .notifications-popup {
+          .popover-content {
+            border-radius: 18px;
+          }
+          .notification-button {
+            position: relative;
+            border-radius: 100%;
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid var(--gray-300);
+            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  
+            &:hover {
+              background-color: var(--gray-light);
+              border-color: var(--gray-light);
+            }
+  
+            & > .unread {
+              position: absolute;
+              top: 11px;
+              right: 12px;
+              width: 6px;
+              height: 6px;
+              border-radius: 100%;
+              background-color: var(--pink-default);
+              z-index: 1;
+            }
+          }
+          .notifications-wrapper {
+            border-radius: 18px;
+            background-color: var(--white);
+            width: 375px;
+            .notifications-header {
+              padding: 12px 16px;
+              border-bottom: 1px solid var(--gray-light);
+  
+              .mark-read-btn {
+                background-color: transparent;
+                padding: 0;
+                
+                span {
+                  text-decoration: underline;
+                }
+              }
+            }
+  
+            .notifications-container {
+              max-height: 504px;
+              overflow-y: auto;
+              width: 100%;
+              .notification-container {
+                padding: 12px 16px;
+                cursor: pointer;
+                width: 100%;
+                transition: background-color 0.3s ease-in-out;
+                border: 1px solid transparent;
+                &:hover {
+                  background-color: var(--gray-light);
+                }
+  
+                .notification-content {
+                  overflow: hidden;
+                }
+  
+                .unread {
+                  width: 10px;
+                  height: 10px;
+                  border-radius: 100%;
+                  background-color: var(--pink-default);
+                }
+  
+                .action-btn {
+                  position: relative;
+                  .notification-action-btn {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                  .notification-action-menu {
+                    padding: 6px 0;
+                    background-color: var(--white);
+                    border-radius: 10px;
+    
+                    .action-menu {
+                      display: flex;
+                      align-items: center;
+                      justify-content: flex-start;
+                      gap: 8px;
+                      border-radius: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
